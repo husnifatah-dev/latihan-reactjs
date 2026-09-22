@@ -1,16 +1,53 @@
-# React + Vite
+# React Contact App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sebuah aplikasi daftar kontak sederhana yang dibangun menggunakan **React** dan **Vite**. Proyek ini dibuat sebagai sarana pembelajaran untuk memahami konsep dasar React, khususnya mengenai *Component-Based Architecture* dan modularisasi antarmuka pengguna (UI).
 
-Currently, two official plugins are available:
+## Fitur & Pembelajaran Utama
+- **Modularisasi Komponen:** Memecah antarmuka utama menjadi potongan komponen kecil yang *reusable* (seperti `ContactList`, `ContactItem`, dan `ContactItemBody`)[cite: 3].
+- **List Rendering:** Me-render kumpulan data array JavaScript menjadi elemen daftar (list) pada DOM[cite: 3].
+- **Local Asset Management:** Menampilkan aset gambar secara lokal untuk avatar karakter (Kira, Mob, Saitama)[cite: 3].
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Struktur Direktori
 
-## React Compiler
+Proyek ini disusun dengan struktur berikut:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```text
+src/
+├── components/          # Kumpulan komponen UI React
+│   ├── ContactApp.jsx       # Komponen induk (Container)
+│   ├── ContactList.jsx      # Merender daftar kontak
+│   ├── ContactItem.jsx      # Wrapper untuk setiap item kontak
+│   ├── ContactItemBody.jsx  # Menampilkan nama dan detail
+│   └── ContactItemImage.jsx # Menampilkan avatar
+├── styles/css/
+│   └── style.css        # Custom styling aplikasi
+├── utils/
+│   └── data.js          # Dummy data kontak
+└── index.jsx            # Entry point aplikasi React
 
-## Expanding the ESLint configuration
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Cara Menjalankan Proyek (Local Development)
+Pastikan kamu sudah menginstal Node.js di sistem kamu.
+
+Clone repository ini: 
+git clone [https://github.com/HusniFatah/belajar-reactjs.git](https://github.com/HusniFatah/belajar-reactjs.git)
+
+Masuk ke dalam direktori proyek
+cd contact-app
+Instal semua dependencies
+
+npm install
+Jalankan local development server
+
+npm run dev
+Buka http://localhost:5173/ (atau port lain yang tertera di terminal) di browser kamu.
+
+Teknologi yang Digunakan
+- React
+
+- Vite
+
+- Vanilla CSS
+
+Dibuat oleh Husni Fatah - Latihan ReactJS
