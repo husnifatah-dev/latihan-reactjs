@@ -39,10 +39,10 @@ class ContactApp extends React.Component {
         return (
             <div className="contact-app">
                 <h1>Aplikasi Kontak</h1>
-                <h2>Tambah Knntak</h2>
+                <h2>Tambah Kontak</h2>
                 <ContactInput addContact={this.onAddContactHandler} />
                 <h2>Daftar Contact</h2>
-                <ContactList contact={this.state.contacts} onDelete={this.onDeleteHandler} />
+                <ContactList contacts={this.state.contacts} onDelete={this.onDeleteHandler} />
             </div>
         )
 
